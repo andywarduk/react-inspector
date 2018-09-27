@@ -72,7 +72,7 @@ const ObjectPreview = ({ data, maxProperties }) => {
 
     return (
       <span style={styles.preview}>
-        {`${object.constructor.name} {`}
+        {`${(object.constructor && object.constructor.name) || ''} {`}
         {intersperse(propertyNodes, ', ')}
         {'}'}
       </span>
